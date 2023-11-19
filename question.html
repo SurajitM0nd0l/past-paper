@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Paper Hub</title>
+    <link rel="stylesheet" href="collage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="pph.jpeg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid hide2 fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="collage.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">ACADEMIC</a></li>
+                    <li><a href="question.html">PREVQ</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid hide2 fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Exam Space</h1>
+    </section>
+    <!-- ------------ Blog page content ------------- -->
+
+    <section class="blog-content">
+        <div>
+            <h3>Choose your Year</h3>
+        </div>
+        <div>
+            <a class="blog-button" href="1styear.html">1st Year</a>
+            <a class="blog-button" href="2ndyear.html">2nd Year</a>
+            <a class="blog-button" href="3rdyear.html">3rd Year</a>
+            <a class="blog-button" href="4thyear.html">4th Year</a>
+        </div>
+    </section>
+
+
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Empowering progress through innovation,our team is dedicated to excellence, integrity, and driving positive
+            impact in every endeavour.</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+    </section>
+
+    <!-- --------- JavaScript for Toggle menu --------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Paper Hub</title>
+    <link rel="stylesheet" href="collage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="pph.jpeg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid hide2 fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="collage.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">ACADEMIC</a></li>
+                    <li><a href="question.html">PREVQ</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid hide2 fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+    <!-- ------------ about us content ------------- -->
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Past Paper Hub</h1>
+                <p>Past Paper Hub stands as the culmination of the collective efforts of Surajit, Soumyadeep, Mohit, and
+                    Zulfequar, a quartet united by a shared dedication to education. In crafting this platform, our team
+                    has orchestrated a harmonious symphony of skills and expertise to create a comprehensive repository
+                    of past year question papers. This endeavor stems from a profound belief in the transformative power
+                    of past papers to elevate academic preparedness. <br> <br> This collaborative initiative seeks to
+                    transcend the conventional boundaries of educational resources. Past Paper Hub is not merely a
+                    repository; it is an embodiment of the team's commitment to fostering a community of learners who
+                    recognize the intrinsic value of practice and self-assessment. The platform serves as a beacon for
+                    students navigating the intricate landscapes of examinations, providing a navigable pathway through
+                    the labyrinth of past papers. <br> <br> Surajit, Soumyadeep, Mohit, and Zulfequar each bring unique
+                    strengths to the table, converging their talents to develop a user-friendly and reliable resource
+                    hub. The platform's essence lies in its role as a facilitator of academic success, offering students
+                    a tool to acquaint themselves with exam patterns, refine their skills, and approach assessments with
+                    confidence. <br> <br> At its core, Past Paper Hub is more than a technological creation; it is a
+                    testament to the collaborative spirit and shared vision of its founders. Through their joint
+                    efforts, this platform stands as a testament to the belief that education is a collective journey,
+                    and Past Paper Hub is a guiding light, illuminating the path toward academic excellence for students
+                    across diverse educational domains.</p>
+                <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="PPH-3.png">
+            </div>
+        </div>
+    </section>
+
+    <div class="ourteam">
+        <h1>Our Team</h1>
+        <p>Our team transforms vision into reality</p>
+    </div>
+    <section class="team-section">
+        <div class="team-member">
+            <img src="surajit.jpeg" alt="Team Member 1">
+            <div class="member-info">
+                <h3>Surajit Mondal</h3>
+                <p>Founder</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="soumyadeep2.jpeg" alt="Team Member 2">
+            <div class="member-info">
+                <h3>Soumyadeep Das</h3>
+                <p>President</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="mohit.jpeg" alt="Team Member 2">
+            <div class="member-info">
+                <h3>Mohit Sharma</h3>
+                <p>Director</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="zulfequar5.jpeg" alt="Team Member 2">
+            <div class="member-info">
+                <h3>Zulfequar Alam</h3>
+                <p>Tech Lead</p>
+            </div>
+        </div>
+
+
+
+        <section class="footer">
+            <h4>ABOUT US</h4>
+            <p>Empowering progress through innovation,our team is dedicated to excellence, integrity, and driving
+                positive
+                impact in every endeavour.</p>
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </section>
+
+        <!-- --------- JavaScript for Toggle menu --------- -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script>
+            // Scroll effect using GSAP
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.from(".about-col", {
+                scrollTrigger: {
+                    trigger: ".about-col",
+                    start: "top bottom", 
+                    end: "bottom center",
+                    scrub: 2,
+                },
+                y: 70,
+                opacity: -0.5,
+                duration: 2,
+            });
+        </script>
+
+</body>
+
+</html>

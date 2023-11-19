@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Paper Hub</title>
+    <link rel="stylesheet" href="collage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="pph.jpeg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid hide2 fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="collage.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">ACADEMIC</a></li>
+                    <li><a href="question.html">PREVQ</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid hide2 fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Past Paper Hub</h1>
+            <p>"Success in EXAM lies in understanding the past"</p>
+            <a href="about.html" class="hero-btn">Visit us to know more</a>
+        </div>
+    </section>
+
+
+    <section class="course">
+        <h1>Facilities We Offer</h1>
+        <p>Elevate your experience with our diverse array of facilities, designed to enhance convenience, comfort, and
+            overall satisfaction.</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Previous Year's Question Paper</h3>
+                <p>
+                    Unlock the key to success by revisiting the insights of the past-explore our comprehensive
+                    collection of previous year question papers.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Routine</h3>
+                <p>
+                    Navigate the academic journey seamlessly with our college routine,balancing learning and leisure for
+                    a holistic student experience.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>College Circular</h3>
+                <p>
+                    Stay informed and connected-explore the latest updates and important information through our college
+                    circular,ensuring you never miss a crucial detail.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="campus">
+        <h1>Our Services</h1>
+        <p>Tailored solutions for academic excellence, supporting success across diverse college landscapes.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="london.jpeg">
+                <div class="layer">
+                    <h3> UEM JAIPUR</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="uemk1.jpeg">
+                <div class="layer">
+                    <h3>UEM KOLKATA</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="iemk.jpeg">
+                <div class="layer">
+                    <h3>IEM KOLKATA</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonials">
+        <h1>What Student Says !!</h1>
+
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="subhayan.jpeg">
+                <div>
+                    <p>"I appreciate the supportive learning environment that empowers me to thrive and pursue my
+                        academic goals."</p>
+                    <h3>Subhayan</h3>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="arindam.jpeg">
+                <div>
+                    <p>"As a student, I value the inspiring opportunities and community engagement that shape my
+                        educational journey through this website."</p>
+                    <h3>Arindam</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="cta cta1">
+        <h1>Connect with us effortlessly - your inquiries matter, and we're here to assist</h1>
+        <a href="contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Empowering progress through innovation,our team is dedicated to excellence, integrity, and driving positive
+            impact in every endeavour.</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+    </section>
+
+    <!-- --------- JavaScript for Toggle menu --------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        
+        gsap.registerPlugin(ScrollTrigger);
+
+        
+        const courseCols = document.querySelectorAll('.course-col');
+
+        courseCols.forEach((col, index) => {
+            gsap.from(col, {
+                scrollTrigger: {
+                    trigger: col,
+                    start: 'top bottom',
+                    end: 'bottom center', 
+                    toggleActions: 'play none none reverse',
+                    scrub: true 
+                },
+                opacity: -0.5,
+                y: 50,
+                duration: 1,
+                delay: index * 0.2 
+            });
+        });
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Define animations for each campus column
+        const campusCols = document.querySelectorAll('.campus-col');
+
+        campusCols.forEach((col, index) => {
+            const image = col.querySelector('img');
+            const layer = col.querySelector('.layer');
+
+            gsap.from(image, {
+                scrollTrigger: {
+                    trigger: col,
+                    start: 'top bottom', 
+                    end: 'center center', 
+                    toggleActions: 'play none none reverse',
+                    scrub: true 
+                },
+                opacity: -0.5,
+                y: 60,
+                duration: 1,
+                delay: index * 0.2 
+            });
+
+            gsap.from(layer, {
+                scrollTrigger: {
+                    trigger: col,
+                    start: 'top bottom', 
+                    end: 'bottom center', 
+                    toggleActions: 'play none none reverse',
+                    scrub: true,
+                },
+                opacity: -0.5,
+                y: 60,
+                duration: 1,
+                delay: index * 0.2 
+            });
+        });
+        
+        gsap.registerPlugin(ScrollTrigger);
+
+        
+        const testimonialCols = document.querySelectorAll('.testimonial-col');
+
+        testimonialCols.forEach((col, index) => {
+            const image = col.querySelector('img');
+            const textContent = col.querySelector('div');
+
+            gsap.from(image, {
+                scrollTrigger: {
+                    trigger: col,
+                    start: 'top bottom', 
+                    end: 'bottom center', 
+                    toggleActions: 'play none none reverse',
+                    scrub: true 
+                },
+                opacity: -0.5,
+                y: 50,
+                duration: 1,
+                delay: index * 0.2 
+            });
+
+            gsap.from(textContent, {
+                scrollTrigger: {
+                    trigger: col,
+                    start: 'top bottom', 
+                    end: 'bottom center', 
+                    toggleActions: 'play none none reverse',
+                    scrub: true 
+                },
+                opacity: -0.5,
+                y: 50,
+                duration: 1,
+                delay: index * 0.2 
+            });
+        });
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Define animations for the CTA section
+        const ctaSection = document.querySelector('.cta');
+        const ctaHeader = ctaSection.querySelector('h1');
+        const ctaButton = ctaSection.querySelector('.hero-btn');
+
+        gsap.from(ctaHeader, {
+            scrollTrigger: {
+                trigger: ctaSection,
+                start: 'top bottom', 
+                end: 'bottom center', 
+                toggleActions: 'play none none reverse',
+                scrub: true 
+            },
+            opacity: -0.5,
+            y: 50,
+            duration: 1
+        });
+
+        gsap.from(ctaButton, {
+            scrollTrigger: {
+                trigger: ctaSection,
+                start: 'top bottom', 
+                end: 'bottom center', 
+                toggleActions: 'play none none reverse',
+                scrub: true 
+            },
+            opacity: -0.5,
+            y: 50,
+            duration: 1,
+            delay: 0.5
+        });
+    </script>
+</body>
+
+</html>
